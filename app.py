@@ -99,9 +99,9 @@ def create_app(db_url=None):
 
 
     # Not required, Since We are creating db with flask migrate
-    # @app.before_first_request
-    # def create_tables():
-    #     db.create_all()
+    @app.before_first_request
+    def create_tables():
+        db.create_all()
 
     api.register_blueprint(ItemBlueprint)
     api.register_blueprint(StoreBlueprint)
