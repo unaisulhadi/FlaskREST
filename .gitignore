@@ -5,3 +5,4 @@ resources/__pycache__
 instance
 .venv
 .postman
+.env
